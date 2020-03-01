@@ -1,0 +1,66 @@
+              LIFE CYCLE METHODS OR HOOKS IN REACT
+                        WHAT ARE THEY ACTUALLY?
+
+You can think of React lifecycle methods as the series of events that happen from the birth of a React component to its death. 
+
+Mounting – Birth of your component
+Update – Growth of your component
+Unmount – Death of your component
+
+Common lifeCycles Methods in React:
+
+0 => constructor(){
+
+}
+
+ 1 => render(){
+
+it must found on every class based component.
+It is a pure function.
+You cannot set state in render()
+
+}
+
+2 => componentDidMount(){
+
+after the first render that is our initial UI is mounted then this method comes in play.
+
+You can modify the component state within the componentDidMount(),
+
+}
+
+
+3 => componentDidUpdate (){
+> This method will call when the props and state changes.
+> You can call setState() in this lifecycle, but keep in mind that you will need to wrap it in a condition to check for state or prop changes from previous state. Incorrect usage of setState() can lead to an infinite loop.
+
+}
+
+4 => componentWillUnmount(){
+}
+
+This component will never be re-rendered and because of that we cannot call setState() during this lifecycle method.
+
+}
+
+Uncommon LifeCycles Method :
+
+shouldComponendupdate (){
+returns a boolean value on which they decide should i render a component again or not ....
+false not render again
+true render again
+
+}
+
+
+var exp = function(){
+xyz
+}
+
+var exp2 =exp;
+exp2();
+
+
+
+
+
